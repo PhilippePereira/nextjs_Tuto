@@ -1,7 +1,13 @@
 {
   "name": "nextjs-fullstack-app-template",
+  "author": "Pereira Philippe",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=16.17.0",
+    "npm": ">=8.15.0",
+    "yarn": "please use npm"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
