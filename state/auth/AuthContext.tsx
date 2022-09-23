@@ -1,4 +1,5 @@
-import { createContext, useState } from 'react';
+import { type } from 'os';
+import React, { createContext, useState } from 'react';
 
 interface IAuthContext {
   authenticated: boolean;
@@ -12,9 +13,13 @@ const defaultValue: IAuthContext = {
   logOut: () => undefined,
 };
 
+type Props = {
+  children?: React.ReactNode
+};
+
 const AuthContext = createContext<IAuthContext>(defaultValue);
 
-export const AuthProvider: React.FC = ({ children }) => {
+export const AuthProvider: React.FC<Props> = ({ children }) => {
   const [authenticated, setAuthenticated] = useState(
     defaultValue.authenticated
   );
